@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datafy</title>
+    <style type="text/css">
+        body{
+            background-image: url('static/wave.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: 0,0,center;
+            text-align:center;
+        }
+        select {
+              padding: 10px 30px;
+              border: 2px solid red;
+              border-radius: 5px;
+              background-color: #f1f1f1;
+              border-color: #782c80;
+              opacity: 0.75;
+              filter: alpha(opacity=75);
+            }
+        button {
+              background-color: #782c80;
+              border: none;
+              border-radius: 4px;
+              color: white;
+              padding: 10px 20px;
+              margin: 4px 2px;
+              cursor: pointer;
+              opacity: 0.7;
+              filter: alpha(opacity=70);
+            }
+            form {
+              display: flex;
+              flex-flow: column wrap;
+              align-items: center;
+            }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+
+</head>
+<body id="body">
+
+<img src="static\logo.png" width="337.5" height="225">
+
+    <h3 style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 30px">
+        Get CSV and JSON Data of Companies listed in Fortune 500
+    </h3>
+
+<!--    <a href="/get_data">Click to download </a>-->
+
+<form action="/get_data" method="POST" class="form-inline">
+
+    <div class = "column">
+
+        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 18px">
+            Choose the Industrial sector
+        </label>
+        <br><br>
+        <select id="country" name="Sector" style="font-size: 12px">
+        <option value="" disabled selected>Select your option</option>
+        <option value="All">All</option>
+        <option value="Technology">Technology</option>
+        <option value="Media">Media</option>
+        </select>
+
+    </div>
+    <br>
+    <div class="column">
+
+        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 18px">
+            Choose the Format
+        </label>
+        <br><br>
+        <select id="ext" name="ext" style="font-size: 12px">
+        <option value="" disabled selected>Select your option</option>
+        <option value="csv">CSV</option>
+        <option value="json">JSON</option>
+        </select>
+
+    </div>
+    <br>
+    <div class = "column">
+
+        <button>Download</button>
+
+    </div>
+
+</form>
+
+</body>
+</html>
