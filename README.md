@@ -2,7 +2,9 @@
 Ever toured websites such as **Linkedin**, **Fortune500**, **Forbes** and believed it would have been exceptional if you could perceive all the _data_ existing in the website in an easy-to-use format preferable a _CSV_ or _JSON_, and then apply your codes or statistical analysis?
 It's a **yes** for several _data scientists_ and _business analysts_ who frequently invest their time trying to find suitable data and regenerate it into a suitable format so that they can apply _data visualization_ and other _data analytics_.
 **Datafy** originated at that instant when I was once challenged by my internship company to accumulate the data of top retailing companies in the world. After a day of googling, I landed at a conclusion to use the **Fortune500** website as my reservoir of data. But why stop at one domain when I can apply it for all potential circumstances? And that's how it all started.
+
 [check out the website](https://datafy-fortune500.herokuapp.com/)
+
 [Demo video](https://youtu.be/kc9OiZvno9A)
 
 ## What it does
@@ -16,9 +18,15 @@ Datafy is a **web scraped data provider website**, effortlessly download _CSV_ a
 
 ## How I built it
 1. **Web Scrapping**: I used **Selenium**, **Chrome driver**, **python** for web scrapping the data from The Fortune500 website.
-[Github link to website code](https://github.com/Shakthi-Dhar/DatafyWebsite), [Github link to web scrapping tool](https://github.com/Shakthi-Dhar/scrapping_api)
+
+[Github link to website code](https://github.com/Shakthi-Dhar/DatafyWebsite)
+
+[Github link to web scrapping tool](https://github.com/Shakthi-Dhar/scrapping_api)
+
 2. **Database**: This data that has been scrapped is converted into _JSON_ and _CSV_ format and stored in **Firebase Cloud Storage**
-3.**Website**: Developed a _beautiful web application_ (for best UI use in laptop/desktop) that sends a request to download the data from the firebase cloud storage and saves it on the user's local system. [Check out the website](https://datafy-fortune500.herokuapp.com/)
+3.**Website**: Developed a _beautiful web application_ (for best UI use in laptop/desktop) that sends a request to download the data from the firebase cloud storage and saves it on the user's local system. 
+
+[Check out the website](https://datafy-fortune500.herokuapp.com/)
 
 ## Challenges I ran into
 1.**Deployment**: _Heroku_ does not allow any request that lasts for more than _30sec_ and _selenium web scrapping_ is a time-consuming process, hence I need to switch to **Firebase** as my server and send a download request to the database rather than creating one instantaneously.
