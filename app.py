@@ -13,6 +13,10 @@ def home():
 def download():
     file = request.form.get('Sector')
     ext = request.form.get('ext')
+    if file is None:
+        file = "All"
+    if ext is None:
+        ext = "csv"
     download_csv(file, ext)
     return send_file('Data\Datafy' + file + '.csv',
                      mimetype='text/csv',

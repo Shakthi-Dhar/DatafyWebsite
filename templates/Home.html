@@ -23,7 +23,7 @@
             place-items: center;
             margin:0;
             padding:0;
-            overflow: hidden;
+<!--            overflow: hidden;-->
         }
         section{
             min-height: 100vh;
@@ -43,20 +43,23 @@
               opacity: 0.75;
               filter: alpha(opacity=75);
               width: 250px;
-              height: 40px;
+              height: 60px;
+              font-family: 'Baloo Bhai 2', cursive;
             }
 
         form {
               display: flex;
-<!--              flex-flow: column wrap;-->
-              align-items: center;
+              font-family: 'Baloo Bhai 2', cursive;
+              align-text: center;
               justify-content: space-around;
         }
 
         option{
             font-size: 12px; color:white;
             width: 250px;
-            height: 20px;
+            height: 30px;
+            opacity: 0.5;
+            font-family: 'Baloo Bhai 2', cursive;
         }
 
         button {
@@ -64,15 +67,15 @@
               border: none;
               border-radius: 5px;
               color: white;
-              padding: 10px 30px;
+              padding: 10px 20px;
               margin: 5px 5px;
               cursor: pointer;
               opacity: 0.9;
-              filter: alpha(opacity=70);
               display: flex;
-              flex-flow: column wrap;
-              align-items: center;
-              height: 40px;
+              align-text: center;
+              height: 60px;
+              font-size: 18px;
+              font-family: 'Baloo Bhai 2', cursive;
             }
          button: focus{
               background-color: #2dbaff;
@@ -84,10 +87,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            top: 10 rem;
+            justify-content: center;
+            bottom: 5 rem;
             left: 50%;
             transform: translateX(-50%);
-            cursor: url('static/vector.png'),auto;
+            cursor: pointer;
         }
         .mouse{
             width: 2rem;
@@ -143,71 +147,173 @@
                 opacity: 1;
             }
         }
+        .cards{
+            display: flex;
+            grid-template-columns: repeat(auto-fit, minmax(400px,lfr));
+            padding: 10px;
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .card{
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 0 0 15px #782c80;
+            max-width: 18.5%;
+            min-height: 425px;
+            min-width: 200px;
+            opacity: 0.85;
+        }
+        .container_card{
+            position: relative;
+            opacity:0.9;
+        }
+        .container_card:after{
+            position: absolute;
+            align-items: center;
+            border-radius: 20px 20px 0 0;
+            opacity: 0.9;
 
+        }
+        .details{
+            padding: 15px 10px;
+        }
+        .details>h4{
+            color: #ffffff;
+            font-family: 'Coda';
+            font-weight: 300;
+            font-size: 22px;
+            margin: 10px 0 15px 0;
+        }
+        .details>p{
+            color: #a0a0a0;
+            opacity: 0.6;
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 200;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
 
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Coda&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <section id="pg1">
+    <section id="Home">
     <div class="container">
     <img src="static\logo.png" width="405" height="270" style="margin-top: -1rem;">
 <!--Main Header-->
 
-    <h3 style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 24px">
+    <h3 style="color: white; font-weight: 400; font-family: 'Coda', cursive; font-size: 24px">
         Get CSV and JSON Data of Companies listed in Fortune 500
     </h3>
     <br>
-
     <form action="/get_data" method="POST" class="form-inline">
 
-
-<!--        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 16px">-->
-<!--            Choose the Industrial sector-->
-<!--        </label>-->
-
-        <select id="country" name="Sector" style="font-size: 14px; color:white;">
+        <select id="country" name="Sector" style="font-size: 18px; color:white;">
         <option value="All" disabled selected>Select the sector</option>
         <option value="All">All</option>
-        <option value="Technology">Technology</option>
+        <option value="Aerospace">Aerospace</option>
+        <option value="Apparel">Apparel</option>
+        <option value="Business Services">Business Services</option>
+        <option value="Chemicals">Chemicals</option>
+        <option value="Energy">Energy</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Financials">Financials</option>
+        <option value="Food">Food & Drug Stores</option>
+        <option value="Food, Beverages">Food, Beverages</option>
+        <option value="Health Care">Health Care</option>
+        <option value="Hotels, Restaurants">Hotels, Restaurants</option>
+        <option value="Household Products">Household Products</option>
+        <option value="Industrials">Industrials</option>
+        <option value="Materials">Materials</option>
         <option value="Media">Media</option>
+        <option value="Motor Vehicles">Motor Vehicles</option>
         <option value="Retailing">Retailing</option>
+        <option value="Technology">Technology</option>
+        <option value="Telecommunications">Telecommunications</option>
+        <option value="Transportation">Transportation</option>
+        <option value="Wholesalers">Wholesalers</option>
         </select>
 
-<!--        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 16px">-->
-<!--            Choose the Format-->
-<!--        </label>-->
-
-        <select id="ext" name="ext" style="font-size: 14px; color: white;">
+        <select id="ext" name="ext" style="font-size: 18px; color: white;">
         <option value="csv" disabled selected>Select the format</option>
         <option value="csv">CSV</option>
         <option value="json">JSON</option>
         </select>
 
-    <br>
-    <div class = "column">
-
         <button>Download</button>
 
-    </div>
+    </form>
 
-</form>
     <br><br><br>
 
-    <a href="#pg2" class="scroll-down">
+    <a href="#Datafy is For" class="scroll-down">
         <div class="mouse"><span></span></div>
         <div class="arrow"><span></span></div>
     </a>
-
     </div>
     </section>
-    <section id="pg2">
-    <br><br>
+
+    <section id="Datafy is For">
+
     <div class="container">
-        <p style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 30px">Hello all</p>
+
+        <h3 style="color: white; font-weight: 700; font-family: 'Coda', cursive; font-size: 42px">
+        Datafy is for
+        </h3>
+    <br>
+        <div class="cards">
+
+        <div class="card cardfield">
+            <div class="container_card">
+                <img src="static/developer.jpg" style="width: 100%; display:block;border-radius: 20px 20px 0 0;">
+            </div>
+            <div class="details">
+                <h4 style="color:white;">Developers</h4>
+                <p style="color:white;">CSV and JSON format make data convenient to handle and implement various data science tools, PowerBI, and it stands developer-friendly
+                </p>
+            </div>
+        </div>
+        <div class="card cardfield">
+            <div class="container_card">
+                <img src="static/procurement.png" style="width: 100%; display:block;border-radius: 20px 20px 0 0;">
+            </div>
+            <div class="details">
+                <h4 style="color:white;">Procurement & Spend Analytics</h4>
+                <p style="color:white;">Datafy lets businesses discover the apt vendor or clients that can help their company reach the precise target audience and be lucrative
+                </p>
+            </div>
+        </div>
+        <div class="card cardfield">
+            <div class="container_card">
+                <img src="static/stats.jpg" style="width: 100%; display:block;border-radius: 20px 20px 0 0;">
+            </div>
+            <div class="details">
+                <h4 style="color:white;">Investors</h4>
+                <p style="color:white;">Datafy exhibits revenue change, profit rate, and other former statistics of companies which assists the investors and stockholders get sound shrewdness through data, and statistics
+                </p>
+            </div>
+        </div>
+        <div class="card cardfield">
+            <div class="container_card">
+                <img src="static/seeker.jpg" style="width: 100%; display:block;border-radius: 20px 20px 0 0;">
+            </div>
+            <div class="details">
+                <h4 style="color:white;">Seekers</h4>
+                <p style="color:white;">Datafy provides the records of prestigious organizations honored by Fortune 500, where every student and a job seeker endeavors  to be an employee
+                </p>
+            </div>
+        </div>
+
+        </div>
+
     </div>
-     </section>
+
+    </section>
+
 </body>
 </html>
