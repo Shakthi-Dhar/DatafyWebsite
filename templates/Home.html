@@ -4,84 +4,188 @@
     <meta charset="UTF-8">
     <title>Datafy</title>
     <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 10px;
+            scroll-behavior: smooth;
+        }
         body{
             background-image: url('static/wave.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: 0,0,center;
+            backdrop-filter: blur(1px);
             text-align:center;
+            place-items: center;
+            margin:0;
+            padding:0;
+            overflow: hidden;
+        }
+        section{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         select {
+              margin: 5px 5px;
               padding: 10px 30px;
+              align-items: center;
               border: 2px solid red;
               border-radius: 5px;
-              background-color: #f1f1f1;
+              background-color: black;
               border-color: #782c80;
               opacity: 0.75;
               filter: alpha(opacity=75);
+              width: 250px;
+              height: 40px;
             }
+
+        form {
+              display: flex;
+<!--              flex-flow: column wrap;-->
+              align-items: center;
+              justify-content: space-around;
+        }
+
+        option{
+            font-size: 12px; color:white;
+            width: 250px;
+            height: 20px;
+        }
+
         button {
               background-color: #782c80;
               border: none;
-              border-radius: 4px;
+              border-radius: 5px;
               color: white;
-              padding: 10px 20px;
-              margin: 4px 2px;
+              padding: 10px 30px;
+              margin: 5px 5px;
               cursor: pointer;
-              opacity: 0.7;
+              opacity: 0.9;
               filter: alpha(opacity=70);
-            }
-            form {
               display: flex;
               flex-flow: column wrap;
               align-items: center;
+              height: 40px;
             }
+         button: focus{
+              background-color: #2dbaff;
+         }
+
+        .scroll-down{
+            position: absolute;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 10 rem;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: url('static/vector.png'),auto;
+        }
+        .mouse{
+            width: 2rem;
+            height: 4rem;
+            border: 2px solid #2dbaff;
+            border-radius: 2rem;
+            margin-bottom: .5rem;
+            display: flex;
+        }
+        .mouse span{
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #2dbaff;
+            display: block;
+            border-radius: 50%;
+            margin: auto;
+            animation: move-wheel 1s linear infinite;
+        }
+        .arrow span{
+            display: block;
+            width: 0.75rem;
+            height: 0.75rem;
+            border: 2px solid transparent;
+            border-right-color: #2dbaff;
+            border-bottom-color: #2dbaff;
+            transform: rotate(45deg);
+            animation: move-arrow 0.5s alternate infinite;
+        }
+        @keyframes move-wheel{
+            0%{
+                opacity: 0;
+                transform: translateY(-0.75rem);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0.75rem);
+            }
+        }
+        @keyframes move-arrow{
+            0%{
+                opacity: 0;
+            }
+            25%{
+                opacity: 0.25;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            75%{
+                opacity: 0.75;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
 
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
 
 </head>
-<body id="body">
+<body>
+    <section id="pg1">
+    <div class="container">
+    <img src="static\logo.png" width="405" height="270" style="margin-top: -1rem;">
+<!--Main Header-->
 
-<img src="static\logo.png" width="337.5" height="225">
-
-    <h3 style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 30px">
+    <h3 style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 24px">
         Get CSV and JSON Data of Companies listed in Fortune 500
     </h3>
+    <br>
 
-<!--    <a href="/get_data">Click to download </a>-->
+    <form action="/get_data" method="POST" class="form-inline">
 
-<form action="/get_data" method="POST" class="form-inline">
 
-    <div class = "column">
+<!--        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 16px">-->
+<!--            Choose the Industrial sector-->
+<!--        </label>-->
 
-        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 18px">
-            Choose the Industrial sector
-        </label>
-        <br><br>
-        <select id="country" name="Sector" style="font-size: 12px">
-        <option value="" disabled selected>Select your option</option>
+        <select id="country" name="Sector" style="font-size: 14px; color:white;">
+        <option value="All" disabled selected>Select the sector</option>
         <option value="All">All</option>
         <option value="Technology">Technology</option>
         <option value="Media">Media</option>
+        <option value="Retailing">Retailing</option>
         </select>
 
-    </div>
-    <br>
-    <div class="column">
+<!--        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 16px">-->
+<!--            Choose the Format-->
+<!--        </label>-->
 
-        <label style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 18px">
-            Choose the Format
-        </label>
-        <br><br>
-        <select id="ext" name="ext" style="font-size: 12px">
-        <option value="" disabled selected>Select your option</option>
+        <select id="ext" name="ext" style="font-size: 14px; color: white;">
+        <option value="csv" disabled selected>Select the format</option>
         <option value="csv">CSV</option>
         <option value="json">JSON</option>
         </select>
 
-    </div>
     <br>
     <div class = "column">
 
@@ -90,6 +194,20 @@
     </div>
 
 </form>
+    <br><br><br>
 
+    <a href="#pg2" class="scroll-down">
+        <div class="mouse"><span></span></div>
+        <div class="arrow"><span></span></div>
+    </a>
+
+    </div>
+    </section>
+    <section id="pg2">
+    <br><br>
+    <div class="container">
+        <p style="color: white; font-weight: 400; font-family: Cabin Sketch; font-size: 30px">Hello all</p>
+    </div>
+     </section>
 </body>
 </html>
