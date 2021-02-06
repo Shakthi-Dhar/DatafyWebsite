@@ -18,8 +18,8 @@ def download():
     if ext is None:
         ext = "csv"
     download_csv(file, ext)
-    return send_file('Data\Datafy' + file + '.csv',
-                     mimetype='text/csv',
+    return send_file('Data\Datafy' + file + '.'+ext,
+                     mimetype='text/'+ext,
                      attachment_filename='Datafy' + file + '.' + ext,
                      as_attachment=True)
 
