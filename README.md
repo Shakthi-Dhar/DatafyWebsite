@@ -13,7 +13,6 @@ It's a **yes** for several _data scientists_ and _business analysts_ who frequen
 
 
 [<img src="Datafy_web/link.png" width= "15%">](https://datafy-fortune500.herokuapp.com/)
-
 [<img src="Datafy_web/yt_link.png" width= "15%">](https://youtu.be/kc9OiZvno9A)
 
 ## What it does
