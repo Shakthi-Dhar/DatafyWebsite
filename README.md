@@ -12,11 +12,15 @@ It's a **yes** for several _data scientists_ and _business analysts_ who frequen
 ## What it does
 Datafy is a **web scraped data provider website**, effortlessly download _CSV_ and _JSON_ Data of Companies listed in **Fortune 500**
 
+<p align="center"><img src="Datafy_web/1.png" width= "80%" ></p>
+
 ## Datafy for:
 1. **Developers**: CSV and JSON format make data convenient to handle and implement various data science tools, PowerBI, and it stands developer-friendly
 2. **Procurement & Spend Analytics**: Datafy lets businesses discover the apt vendor or clients that can help their company reach the precise target audience and be lucrative
 3. **Investors**: Datafy exhibits revenue change, profit rate, and other former statistics of companies which assists the investors and stockholders get sound shrewdness through data, and statistics
 4. **Seekers**: Datafy provides the records of prestigious organizations honored by Fortune 500, where every student and a job seeker endeavors to be an employee
+
+<p align="center"><img src="Datafy_web/2.png" width= "80%" ></p>
 
 ## How I built it
 1. **Web Scrapping**: I used **Selenium**, **Chrome driver**, **python** for web scrapping the data from The Fortune500 website.
@@ -29,6 +33,8 @@ Datafy is a **web scraped data provider website**, effortlessly download _CSV_ a
 3.**Website**: Developed a _beautiful web application_ (for best UI use in laptop/desktop) that sends a request to download the data from the firebase cloud storage and saves it on the user's local system. 
 
 [Check out the website](https://datafy-fortune500.herokuapp.com/)
+
+<p align="center"><img src="Datafy_web/3.png" width= "80%" ></p>
 
 ## Challenges I ran into
 1.**Deployment**: _Heroku_ does not allow any request that lasts for more than _30sec_ and _selenium web scrapping_ is a time-consuming process, hence I need to switch to **Firebase** as my server and send a download request to the database rather than creating one instantaneously.
