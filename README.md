@@ -31,14 +31,13 @@ Datafy is a **web scraped data provider website**, effortlessly download _CSV_ a
 ## How I built it
 1. **Web Scrapping**: I used **Selenium**, **Chrome driver**, **python** for web scrapping the data from The Fortune500 website.
 
-[Github link to website code](https://github.com/Shakthi-Dhar/DatafyWebsite)
-
 [Github link to web scrapping tool](https://github.com/Shakthi-Dhar/scrapping_api)
 
 2. **Database**: This data that has been scrapped is converted into _JSON_ and _CSV_ format and stored in **Firebase Cloud Storage**
+
 3.**Website**: Developed a _beautiful web application_ (for best UI use in laptop/desktop) that sends a request to download the data from the firebase cloud storage and saves it on the user's local system. 
 
-[Check out the website](https://datafy-fortune500.herokuapp.com/)
+[<img src="Datafy_web/link.png" width= "15%">](https://datafy-fortune500.herokuapp.com/)
 
 <p align="center"><img src="Datafy_web/3rd.png" width= "80%" ></p>
 
