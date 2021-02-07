@@ -1,12 +1,19 @@
 <p align="center"><img src="static/logo 3x2.png" width= "40%" ></p>
 
+
+> __<h3>Datafy is a web scraped data provider website <br>
+Effortlessly download CSV and JSON Data of Companies listed in Fortune 500</h3>__
+
 ## Inspiration
 Ever toured websites such as **Linkedin**, **Fortune500**, **Forbes** and believed it would have been exceptional if you could perceive all the _data_ existing in the website in an easy-to-use format preferable a _CSV_ or _JSON_, and then apply your codes or statistical analysis?
+
 It's a **yes** for several _data scientists_ and _business analysts_ who frequently invest their time trying to find suitable data and regenerate it into a suitable format so that they can apply _data visualization_ and other _data analytics_.
+
 **Datafy** originated at that instant when I was once challenged by my internship company to accumulate the data of top retailing companies in the world. After a day of googling, I landed at a conclusion to use the **Fortune500** website as my reservoir of data. But why stop at one domain when I can apply it for all potential circumstances? And that's how it all started.
 
-[check out the website](https://datafy-fortune500.herokuapp.com/)
-
+> __<h3>
+[<img src="Datafy_web/web_button.png" width= "20%">](https://datafy-fortune500.herokuapp.com/)
+</h3>__
 [Demo video](https://youtu.be/kc9OiZvno9A)
 
 ## What it does
@@ -34,7 +41,7 @@ Datafy is a **web scraped data provider website**, effortlessly download _CSV_ a
 
 [Check out the website](https://datafy-fortune500.herokuapp.com/)
 
-<p align="center"><img src="Datafy_web/3.png" width= "80%" ></p>
+<p align="center"><img src="Datafy_web/3rd.png" width= "80%" ></p>
 
 ## Challenges I ran into
 1.**Deployment**: _Heroku_ does not allow any request that lasts for more than _30sec_ and _selenium web scrapping_ is a time-consuming process, hence I need to switch to **Firebase** as my server and send a download request to the database rather than creating one instantaneously.
