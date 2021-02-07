@@ -12,8 +12,8 @@ It's a **yes** for several _data scientists_ and _business analysts_ who frequen
 **Datafy** originated at that instant when I was once challenged by my internship company to accumulate the data of top retailing companies in the world. After a day of googling, I landed at a conclusion to use the **Fortune500** website as my reservoir of data. But why stop at one domain when I can apply it for all potential circumstances? And that's how it all started.
 
 
-[<img src="Datafy_web/link.png" width= "15%">](https://datafy-fortune500.herokuapp.com/)
-[<img src="Datafy_web/yt_link.png" width= "15%">](https://youtu.be/kc9OiZvno9A)
+[<img src="Datafy_web/link.png" width= "20%">](https://datafy-fortune500.herokuapp.com/)
+[<img src="Datafy_web/yt_link.png" width= "20%">](https://youtu.be/kc9OiZvno9A)
 
 ## What it does
 Datafy is a **web scraped data provider website**, effortlessly download _CSV_ and _JSON_ Data of Companies listed in **Fortune 500**
@@ -37,7 +37,7 @@ Datafy is a **web scraped data provider website**, effortlessly download _CSV_ a
 
 3.**Website**: Developed a _beautiful web application_ (for best UI use in laptop/desktop) that sends a request to download the data from the firebase cloud storage and saves it on the user's local system. 
 
-[<img src="Datafy_web/link.png" width= "15%">](https://datafy-fortune500.herokuapp.com/)
+[<img src="Datafy_web/link.png" width= "20%">](https://datafy-fortune500.herokuapp.com/)
 
 <p align="center"><img src="Datafy_web/3rd.png" width= "80%" ></p>
 
