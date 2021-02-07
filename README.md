@@ -1,4 +1,4 @@
-![](https://github.com/Shakthi-Dhar/DatafyWebsite/blob/master/static/logo.png | width = 100)
+<p align="center"><img src="static/logo.png" width= "40%" ></p>
 
 ## Inspiration
 Ever toured websites such as **Linkedin**, **Fortune500**, **Forbes** and believed it would have been exceptional if you could perceive all the _data_ existing in the website in an easy-to-use format preferable a _CSV_ or _JSON_, and then apply your codes or statistical analysis?
