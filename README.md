@@ -1,3 +1,4 @@
+# Datafy
 <p align="center"><img src="static/logo 3x2.png" width= "40%" ></p>
 
 
