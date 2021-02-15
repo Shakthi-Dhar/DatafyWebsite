@@ -52,8 +52,9 @@ Datafy is a **web scraped data provider website**, effortlessly download _CSV_ a
 3. Putting my web scrapping skills into help for other data scientists is a commendable achievement
 
 ## What I learned
-1. Flask Cloud storage
-2. HTML, CSS scroll button feature and cards system
+1. Python Flask web development
+2. Firebase Cloud storage
+3. HTML, CSS scroll button feature and cards system
 
 ## What's next for DATAFY
 Currently, Datafy focuses on extracting data from _The Fortune500 website_, but in **LinkedIn**, there are more than **50 million companies** which I aim to extract information from and present it to all the Data scientists out there in the world.
