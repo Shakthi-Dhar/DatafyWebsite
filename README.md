@@ -1,6 +1,6 @@
 # Datafy
 <p align="center"><img src="static/logo 3x2.png" width= "40%" ></p>
-
+Datafy is a web scraped data provider website, effortlessly download CSV and JSON Data of Companies listed in Fortune 500 </h3>
 
 > __<h3>Datafy is a web scraped data provider website <br>
 Effortlessly download CSV and JSON Data of Companies listed in Fortune 500</h3>__
